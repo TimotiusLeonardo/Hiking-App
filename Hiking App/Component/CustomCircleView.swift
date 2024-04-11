@@ -23,11 +23,6 @@ struct CustomCircleView: View {
                         startPoint: isAnimateGradient ? .topLeading : .bottomLeading,
                         endPoint: isAnimateGradient ? .bottomTrailing : .topTrailing)
                 )
-                .onAppear {
-                    withAnimation(.linear(duration: 3.0).repeatForever(autoreverses: true)) {
-                        isAnimateGradient.toggle()
-                    }
-                }
             
             MotionAnimationView()
         }.frame(width: 256, height: 256)

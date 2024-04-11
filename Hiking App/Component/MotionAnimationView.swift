@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct MotionAnimationView: View {
-    @State private var randomCircle: Int = Int.random(in: 6...12)
+    @State private var randomCircle: Int = Int.random(in: 10...14)
     @State private var isAnimating: Bool = false
     
     // MARK: - Functions
     
     // 1. RANDOM COORDINATE
     func randomCoordinate() -> CGFloat {
-        return .random(in: 0...256)
+        return .random(in: 0...200)
     }
     // 2. RANDOM SIZE
     func randomSize() -> CGFloat {
-        return .random(in: 4...80)
+        return .random(in: 10...80)
     }
     // 3. RANDOM SCALE
     func randomScale() -> CGFloat {
