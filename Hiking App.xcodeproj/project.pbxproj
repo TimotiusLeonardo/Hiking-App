@@ -18,6 +18,7 @@
 		FF5F12752BC65DFD009D8DB8 /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F12742BC65DFD009D8DB8 /* GradientButtonStyle.swift */; };
 		FF5F12772BC7D450009D8DB8 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F12762BC7D450009D8DB8 /* CustomCircleView.swift */; };
 		FF5F12792BC7D56C009D8DB8 /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F12782BC7D56C009D8DB8 /* MotionAnimationView.swift */; };
+		FF5F127C2BC7DB06009D8DB8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F127B2BC7DB06009D8DB8 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		FF5F12742BC65DFD009D8DB8 /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		FF5F12762BC7D450009D8DB8 /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		FF5F12782BC7D56C009D8DB8 /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
+		FF5F127B2BC7DB06009D8DB8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +69,8 @@
 			children = (
 				FF5F126F2BC64B44009D8DB8 /* Utility */,
 				FF5F126C2BC6496E009D8DB8 /* Component */,
+				FF5F127A2BC7DAF3009D8DB8 /* Screen */,
 				FF5F125C2BC646C7009D8DB8 /* Hiking_AppApp.swift */,
-				FF5F125E2BC646C7009D8DB8 /* ContentView.swift */,
 				FF5F12602BC646CA009D8DB8 /* Assets.xcassets */,
 				FF5F12622BC646CA009D8DB8 /* Preview Content */,
 			);
@@ -102,6 +104,15 @@
 				FF5F12742BC65DFD009D8DB8 /* GradientButtonStyle.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		FF5F127A2BC7DAF3009D8DB8 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F125E2BC646C7009D8DB8 /* ContentView.swift */,
+				FF5F127B2BC7DB06009D8DB8 /* SettingsView.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				FF5F126B2BC648AD009D8DB8 /* CardView.swift in Sources */,
 				FF5F125D2BC646C7009D8DB8 /* Hiking_AppApp.swift in Sources */,
 				FF5F12732BC65914009D8DB8 /* CustomButtonView.swift in Sources */,
+				FF5F127C2BC7DB06009D8DB8 /* SettingsView.swift in Sources */,
 				FF5F12752BC65DFD009D8DB8 /* GradientButtonStyle.swift in Sources */,
 				FF5F12792BC7D56C009D8DB8 /* MotionAnimationView.swift in Sources */,
 				FF5F126E2BC64993009D8DB8 /* CustomBackgroundView.swift in Sources */,
