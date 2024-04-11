@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    // MARK: - PROPERTIES
+    
+    private let alternateAppIcons: [String] = [
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Mushroom",
+        "AppIcon-Camera",
+        "AppIcon-Backpack",
+        "AppIcon-Campfire"
+    ]
+    
     var body: some View {
         List {
             Section {
@@ -49,6 +60,42 @@ struct SettingsView: View {
             .listRowSeparator(.hidden)
             
             // MARK: - SECTION: ICONS
+            Section(header: Text("Alternate Icons")) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(alternateAppIcons, id: \.self) { item in
+                            Button {
+                                print("Icon \(item) was pressed.")
+                                UIApplication.shared.setAlternateIconName(item) { error in
+                                    if error != nil {
+                                        print("Failed request to update the app's icon: \(String(describing: error?.localizedDescription))")
+                                    } else {
+                                        print("Success set alternate icons \(item)")
+                                    }
+                                }
+                            } label: {
+                                Image("\(item)-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                            }
+                        .buttonStyle(.borderless)
+                        }
+                    }
+                } //: SCROLL VIEW
+                .padding(
+                    .top, 12
+                )
+                
+                Text("Choose your favorite app icon from the collection above.")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(Color.secondary)
+                    .font(.footnote)
+                    .padding(.bottom, 12)
+            }
+            .listRowSeparator(.hidden)
             
             // MARK: - SECTION: ABOUT
             Section(
